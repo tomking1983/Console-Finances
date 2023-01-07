@@ -87,18 +87,28 @@ let finances = [
 ['Feb-2017', 671099]
 ];
 
-// work out average of all the numbers in the array
+
+// work out the average of total profit/losses over the period
 let total = 0;
 for (let i = 0; i < finances.length; i++) {
     total += finances[i][1];
 }
 
-console.log(total);
+// console.log(total / finances.length);
 
-console.log(finances.length);
+// console.log(total);
 
-let average = total / finances.length;
-console.log(average);
+// console.log(finances.length);
+
+// average total/number of months to 2 decimal places
+let average = 0;
+for (let i = 0; i < finances.length; i++) {
+    average += finances[i][1];
+}
+average = average / finances.length;
+average = average.toFixed(2);
+
+// console.log(average);
 
 // average change in profit/losses
 let change = 0;
@@ -114,9 +124,17 @@ for (let i = 0; i < finances.length; i++) {
     }
 }
 
-console.log(greatestIncrease);
+// greatest increase in profits month
+let greatestIncreaseMonth = 0;
+for (let i = 0; i < finances.length; i++) {
+    if (finances[i][1] > greatestIncreaseMonth) {
+        greatestIncreaseMonth = finances[i][0];
+    }
+}
 
-// greatest decrease in losses
+// console.log(greatestIncrease);
+
+// greatest decrease in profits
 let greatestDecrease = 0;
 for (let i = 0; i < finances.length; i++) {
     if (finances[i][1] < greatestDecrease) {
@@ -124,4 +142,22 @@ for (let i = 0; i < finances.length; i++) {
     }
 }
 
-console.log(greatestDecrease);
+// greatest decrease in profits month
+let greatestDecreaseMonth = 0;
+for (let i = 0; i < finances.length; i++) {
+    if (finances[i][1] < greatestDecreaseMonth) {
+        greatestDecreaseMonth = finances[i][0];
+    }
+}
+
+// console.log(finances[0][0]);
+
+// console.log(greatestDecrease);
+
+console.log('Financial Analysis');
+console.log('------------------');
+console.log('Total Months: ' + finances.length);
+console.log('Total: £' + total);
+console.log('Average Change: £' + average);
+console.log('Greatest Increase in Profits: ' + greatestIncreaseMonth, '$(' + greatestIncrease + ')');
+console.log('Greatest Decrease in Profits: ' + greatestDecreaseMonth, '$(' + greatestDecrease + ')');
