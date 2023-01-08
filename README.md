@@ -1,14 +1,10 @@
 # Unit 4 Challenge: Console Finances
 
-## Overview
+## Description
 
-In this challenge, you'll be using the concepts you've learned to complete the required activity. This activity presents a real-world situation in which your newfound JavaScript skills will come in handy. You are tasked with creating code for analyzing the financial records of a company. You have been provided with a financial dataset in the `starter/index.js` file.
+In this challenge I needed to implement a JavaScript operation to display the results of certain criteria from the dataset that had been provided of financial figures.
 
-## Instructions
-   
-You have been given a dataset composed of arrays with two fields, Date and Profit/Losses.
-
-Your task is to write JavaScript code that analyzes the records to calculate each of the following:
+This criteria was as follows;
 
 * The total number of months included in the dataset.
 
@@ -22,17 +18,13 @@ Your task is to write JavaScript code that analyzes the records to calculate eac
 
 * The greatest decrease in losses (date and amount) over the entire period.
 
-When you open your code in the browser your resulting analysis should look similar to the following:
+The results are to be printed to the console rather than displaying ona webpage.
 
-  ```text
-  Financial Analysis
-  ----------------------------
-  Total Months: 25
-  Total: $2561231
-  Average  Change: $-2315.12
-  Greatest Increase in Profits: Feb-2012 ($1926159)
-  Greatest Decrease in Profits: Sep-2013 ($-2196167)
-  ```
+## Misc
+   
+There was some confusion, amongst many students, about exactly what results we should be showing. After a discussion in the class it was determined that we should be showing the average of the total divided between the amount of months in the data that had been given. This is how I have gone about determining the results for this challenge
 
-Your final code should print the analysis to the console.
+### Link to work
+
+
 
