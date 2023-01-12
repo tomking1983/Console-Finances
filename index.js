@@ -134,6 +134,8 @@ console.log(`Greatest Increase in Profits: ${greatestIncreaseDate} ($${greatestI
 console.log(`Greatest Decrease in Profits: ${greatestDecreaseDate} ($${greatestDecrease})`);
 
 
+// Display results in the browser HTML output
+
 document.getElementById("totalMonths").innerHTML = "Total Months: " + numMonths;
 document.getElementById("total").innerHTML = "Total: " + "$" + total;
 document.getElementById("averageChange").innerHTML = "Average Change: " + "$" + averageChange;
